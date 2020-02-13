@@ -16,7 +16,7 @@
 \section{Чем отличается транзакция от запроса в контексте БД}
 Транзакция - это несколько последовательных запросов в БД, если хотя бы одна из них завершается, то вся транзакция отменяется (rolling back).
 
-\section{Модель транзакции в стандарте ANSI/ISO}
+\section{Модель транзакции в стандарте ANSI ISO}
 \subsection{Что такое ACID}
 
 Atomicity - не делимая операция.
@@ -122,7 +122,7 @@ Durability - диск надежное хранилище.
 \subsection{Распределенные транзакции}
 
 Дока постгреса:
-\href{https://www.postgresql.org/docs/12/sql-prepare-transaction.html}
+\href{https://www.postgresql.org/docs/12/sql-prepare-transaction.html}{Postgres doc}
 
 \section{Индексы в postgres}
 Индекс - это дополнительная структура данных для ускорения запросов.
@@ -224,7 +224,7 @@ CREATE INDEX ind_a ON table USING btree (foo(name));
 \item Дублирующие индексы
 \end{itemize}
 
-\href{https://wiki.postgresql.org/wiki/Index_Maintenance}
+\href{https://wiki.postgresql.org/wiki/Index_Maintenance}{Indexes}
 
 \section{Что такое include индексы?}
 \section{Как посмотреть индексы для таблицы?}

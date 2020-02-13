@@ -1,1 +1,7 @@
-*~
+*.aux
+*.log
+*.toc
+*.pdf
+*.upa
+*.upb
+*.out
