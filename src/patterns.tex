@@ -1,0 +1,106 @@
+\part{Шаблоны (паттерны) проектирования}
+
+Шаблоны проектирования - это архитектурная конструкция, которая представляюет собой решение часто возникающей проблемы проектирования в определненном контексте.
+
+В мире программирования шаблоны занимают роль фундамента на ровне со структурами и алгоритмами.
+
+Тема довольно обширная, один из лучших источников выступает вики:
+
+\url{https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F}
+
+\section{Основные шаблоны (Fundamental)}
+
+\subsection{Шаблон делегирования (Delegation pattern )}
+\subsection{Шаблон функционального дизайна (Functional design )}
+\subsection{Неизменяемый интерфейс (Immutable interface)}
+\subsection{Интерфейс (Interface)}
+\subsection{Интерфейс-маркер (Marker interface)}
+\subsection{Контейнер свойств (Property container)}
+\subsection{Канал событий (Event channel)}
+
+\section{Порождающие}
+
+Порождающие шаблоны проектирования - такие шаблоны, которые применяются когда базовые методы создания не доступны, или они ломают архитектуру приложения.
+
+\subsection{Simple Factory (Простая фабрика)}
+\subsection{Abstract factory (Абстрактная фабрика)}
+\subsection{Factory method (Фабричный метод)}
+\subsection{Строитель (Builder)}
+\subsection{Прототип (Prototype)}
+\subsection{Одиночка (Singleton)}
+Пример на Питоне:
+\linenumbers
+\inputpython{singleton.py}{1}{100}
+\nolinenumbers
+\subsection{Отложенная инициализация (Lazy initialization)}
+\subsection{Пул одиночек (Multiton)}
+\subsection{Объектный пул (Object pool)}
+\subsection{Получение ресурса есть инициализация (Resource acquisition is initialization (RAII) )}
+
+\section{Структурные}
+
+Структурные шаблоны проектирования - такие шаблоны, которые образуют из классов и объектов новые структуры.
+
+\subsection{Адаптер (Adapter)}
+\subsection{Мост (Bridge)}
+\subsection{Декоратор (Decorator)}
+\subsection{Компоновщик (Composite)}
+\subsection{Приспособленец (Flyweight)}
+\subsection{Фасад (Facade)}
+\subsection{Заметистель (Proxy)}
+\subsection{Единая точка входа (Front controller)}
+
+\section{Поведенческие}
+
+Поведенческие шаблоны проектирования - такие шаблоны, которые определяют алгоритмы и способы взаимосвязи между объектами и классами.
+
+\subsection{Цепочки обязанностей (Chain of responsibility)}
+\subsection{Итератор (Iterator)}
+\subsection{Посредник (Mediator)}
+\subsection{Обозреватель (Obsorve)}
+\subsection{Посетитель (Visitor)}
+\subsection{Стратегия (Stratagy)}
+\subsection{Состояние (Satate)}
+\subsection{Команда (Comand)}
+\subsection{Хранитель (Memento)}
+\subsection{Шаблонный метод (Template method)}
+\subsection{Спецификация}
+\subsection{Слуга}
+\subsection{Простая политика}
+
+\section{Шаблоны параллельного программирования (Concurrency)}
+
+Используются для более эффективного написания многопоточных программ, и предоставляет готовые решения проблем синхронизации. 
+
+\subsection{Active Object}
+\subsection{Balking}
+\subsection{Binding properties}
+\subsection{Обмен сообщениями (Messaging pattern, Messaging design pattern (MDP) )}
+\subsection{Блокировка с двойной проверкой}
+\subsection{Event-based asynchronous}
+\subsection{Охраняемая приостановка }
+\subsection{Half-Sync/Half-Async}
+\subsection{Leaders/followers}
+\subsection{Блокировка}
+\subsection{Монитор}
+\subsection{Reactor}
+\subsection{Read/write lock}
+\subsection{Scheduler}
+\subsection{Thread pool}
+\subsection{Thread-Specific Storage}
+\subsection{Однопоточное выполнение}
+\subsection{Кооперативный паттерн}
+
+\section{Dependency Injection}
+Dependency Injection (DI) — это набор паттернов и принципов разработки програмного обеспечения, которые позволяют писать слабосвязный код. По мнению М.Фаулера, DI является разновидностью более глобального принципа инверсии управления (IoC), также известного как “Hollywood Principle”. Между тем, границы принципов внедрения зависимости достаточно размыты. Невозможно провести действительно четкую границу между этим и другими принципами написания качественного объектно-ориентированного кода. Например, принцип Dependency Inversion из SOLID, который часто путают с Dependency Injection, как бы подразумевает внедрение зависимостей, но им не ограничивается.
+
+\section{Обращение контроля (Inverse of control)}
+
+\chapter{Отказоустойчивость}
+
+\sectopn{Избыточность}
+\sectopn{Горячая замена}
+\sectopn{Выбор лидера}
+\sectopn{Умная балансировка нагрузки}
+\sectopn{Идентепотентность}
+\sectopn{Автоматическое восстановление}

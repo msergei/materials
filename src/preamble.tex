@@ -1,0 +1,56 @@
+% Главные модули
+\documentclass[a4paper, 12pt, oneside]{scrbook}						% Современые классы документов для отображения: scrbook, scrreprt, scrartcl, scrlttr2 and typearea
+\usepackage{textcomp}
+\usepackage{enumitem}
+%\documentclass[a4paper, 12pt, oneside]{ncc}						% Это другая замена стандарным классам 
+\usepackage[warn]{mathtext}								% русские буквы в формулах, с предупреждением
+\usepackage[T2A]{fontenc}								% внутренняя кодировка  TeX
+\usepackage{mathtext}
+\usepackage[utf8x]{inputenc}								% кодовая страница документа
+\usepackage[english, russian]{babel}							% локализация и переносы
+
+% Второстепенные модули
+\usepackage[author={july rise}]{pdfcomment}						% Отображение комментарием для pdf документа \pdfcomment[color=red,icon=Insert]{insert: miss}
+\usepackage{indentfirst}								% русский стиль: отступ первого абзаца раздела
+\usepackage{misccorr}									% точка в номерах заголовков
+\usepackage{cmap}									% русский поиск в pdf
+\usepackage{graphicx}									% Работа с графикой \includegraphics{}
+\usepackage{psfrag}									% Замена тагов на eps картинкаx
+\usepackage{ltxtable}									% Микс tabularx и longtable, загрузка до longtable
+\usepackage{caption2}									% Работа с подписями для фигур, таблиц и пр.
+\usepackage{soul}									% Разряженный текст \so{} и подчеркивание \ul{}
+\usepackage{soulutf8}									% Поддержка UTF8 в soul
+\usepackage{fancyhdr}									% Для работы с колонтитулами
+\usepackage{multirow}									% Аналог multicolumn для строк
+\usepackage{paralist}									% Списки с отступом только в первой строчке
+\usepackage{mathtext}									% Русские буквы в формулах
+\usepackage{upgreek}									% Греческие символы \upalpha, \upbeta и т.д.
+\usepackage{hyperref}									% Подключение отображения ссылок \href{http://..}{Текст над ссылкой}
+\usepackage{textcomp}									% Отображение символа "номер" и других, стилевой пакет делающий красивости
+\usepackage[perpage]{footmisc}								% Нумерация сносок на каждой странице с 1
+\usepackage{amssymb,amsmath,amsfonts,latexsym}						% Расширенные наборы математических символов
+\usepackage{cite}									% "умные" библиографические ссылки(сортировка и сжатие)
+\usepackage{pdfpages}									% Подгрузка в файл PDF: \includepdf[fitpaper=true, pages=-]{YLM_Series.pdf}
+\usepackage{lscape}									% Изменение ориентации отдельной страницы \begin{landscape} ... \end{landscape}
+\usepackage{pythonhighlight}								% Включение, вывод и подсветка python-кода \pyth{...} или \begin{python} \end{python} или \inputpython{p.py}{23}{50}
+\usepackage{indentfirst}								% Всякие настройки
+\usepackage[a4paper, top=25mm, left=10mm, right=10mm, bottom=25mm]{geometry}		% Задаем отступы: слева 30 мм, справа 10 мм, сверху до колонтитула 10 ммснизу 25 мм
+\usepackage{lineno}									% Для нумерации строк после этого в тексте: \linenumbers \nolinenumbers
+\usepackage{listings} 									% Вставка кода \lstinputlisting[language=C++]{ex7.cpp} или \begin{lstlisting} ...  \end{lstlisting}
+\usepackage{comment}									% Пакет для коментов: \if 0 \fi
+\usepackage{silence}									% Подавление вывода не нужных сообщений
+\usepackage{fancyhdr}									% Расширенное управление нумераций страниц
+
+% Различные установки
+%\captionsetup[longtable]{justification=centering}					% Для центрирования заголовков таблиц
+\sloppy											% Указывает о борьбе с залезанием на поля
+\newcommand*{\No}{\textnumero}								% Переопределяем символ "номер" для привычного отображения
+\linespread{1.2}									% Установка межстрочного интервала
+\righthyphenmin=2									% Минимальное число символов при переносе - 2
+% Нумерация формул, картинок и таблиц по секциям
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+
+\pagestyle{fancy}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %

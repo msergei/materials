@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+
+LABEL maintainer='julyrise'
+
+#change entrypoint
+ENTRYPOINT ['/bin/sh']
