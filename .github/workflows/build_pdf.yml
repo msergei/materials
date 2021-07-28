@@ -27,6 +27,7 @@ jobs:
           root_file: main.tex
           working_directory: src/
           extra_system_packages: "xzdec python-pygments"
+          latexmk_shell_escape: true
           pre_compile: "tlmgr update --self && tlmgr update --all && tlmgr install pythonhighlight"
           post_compile: "latexmk -c"
           
