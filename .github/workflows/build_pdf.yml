@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ master, testing ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,22 +17,29 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Build the doc
+      - name: Build document
         uses: xu-cheng/latex-action@v2
+
         with:
+
+          # Переименуйте, если у вас другой файл
+
           root_file: main.tex
+
+          # Больше параметров в офф. документации
+
           working_directory: src/
-          extra_system_packages: "xz py-pygments"
-          latexmk_shell_escape: true
-          pre_compile: "tlmgr update --self && tlmgr update --all && tlmgr install pythonhighlight"
-          post_compile: "latexmk -c"
+
+          # Аргументы, к которыми запускать компилятор (latexmk)
+
+          # -jobname=<name> дает возможность поменять имя выходного файла
+          args: -interaction=nonstopmode main.tex
+          compiler: pdflatex
           
       - name: Upload pdf document
         uses: actions/upload-artifact@v2
         with:
-          name: my_doc
-          path: src/my_doc.pdf
+          name: materials
+          path: src/main.pdf

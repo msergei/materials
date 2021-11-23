@@ -2,15 +2,10 @@ version: '3.8'
 
 services:
     tex:
-        image: cemulate/sharelatex-full:v2.1.1
+        image: ghcr.io/xu-cheng/texlive-full:latest
         working_dir: /source_files
-        command:
-            - -c
-            - |
-              pdflatex -interaction=batchmode -output-directory=/output main.tex
-              pdflatex -interaction=batchmode -output-directory=/output main.tex
+        command: pdflatex -output-directory=/output main.tex;
         volumes:
             - ./src:/source_files
             - ./output:/output
-        entrypoint: bash
         network_mode: none
