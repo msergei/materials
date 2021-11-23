@@ -21,22 +21,11 @@ jobs:
 
       - name: Build document
         uses: xu-cheng/latex-action@v2
-
         with:
-
-          # Переименуйте, если у вас другой файл
-
           root_file: main.tex
-
-          # Больше параметров в офф. документации
-
           working_directory: src/
-
-          # Аргументы, к которыми запускать компилятор (latexmk)
-
-          # -jobname=<name> дает возможность поменять имя выходного файла
-          args: -interaction=nonstopmode main.tex
-          compiler: pdflatex
+          args: -pdf -shell-escape main.tex
+          compiler: latexmk
           
       - name: Upload pdf document
         uses: actions/upload-artifact@v2
