@@ -24,7 +24,7 @@ jobs:
         with:
           root_file: main.tex
           working_directory: src/
-          args: -pdf -shell-escape main.tex
+          args: -pdf -shell-escape -c main.tex
           compiler: latexmk
           
       - name: Upload pdf document
